@@ -71,8 +71,11 @@ function randomFunction(key){
 
 window.document.addEventListener("keydown", function(event) {
     const key = event.key;
-    
-    if(key === "p"){
+    if(key != "p" && key != "s" && key != "r"){
+        alert("Please Enter a valid key")
+        return 0
+    }
+    else if(key === "p"){
         player1Img.src = './src/asesst/images/p.png'
         player1ImgName.innerHTML = "Paper"
         randomFunction(key)
